@@ -238,3 +238,11 @@
   .cycling-popup .leaflet-popup-content-wrapper {
     border-left: 5px solid var(--color-brand--1);
   }
+  @media screen and (max-width:700px) {
+    body{
+      display: grid;
+      grid-template-rows: 50vh 50vh;
+      height: 100vh;
+    }
+    #map{order: -1;grid-row: 1/2;}
+  }

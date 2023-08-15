@@ -290,13 +290,7 @@ class App {
       this._setLocalStorage();
     }
 
-    //then add new obj to the workout array
 
-    //render workout on thr map as marker
-
-    //render workout in the list
-
-    // hide form + clear form fields
     inputDistance.focus();
 
     inputDistance.value =
@@ -320,8 +314,3 @@ class App {
 }
 
 const app = new App();
-//const a = [1,2,3,4,5,{boy:'one'}]
-//const c = a[5]
-//console.log(c)
-//a.splice(a.indexOf(c),1)
-//console.log(a)
