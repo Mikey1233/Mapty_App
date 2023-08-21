@@ -245,4 +245,19 @@
       height: 100vh;
     }
     #map{order: -1;grid-row: 1/2;}
+    .sidebar{
+      padding: 1em;
+    }
+    .workouts{
+      padding: 1em;
+    }
+    .form{
+      padding: 1em;
+    }
+    .form.hidden{
+      padding: 1em;
+    }
+    .logo{
+      margin-bottom: 1em;
+    }
   }
