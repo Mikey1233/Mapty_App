@@ -243,6 +243,10 @@
       display: grid;
       grid-template-rows: 50vh 50vh;
       height: 100vh;
+      line-height: 1.5;
+    }
+    html{
+      font-size: 50%;
     }
     #map{order: -1;grid-row: 1/2;}
     .sidebar{
