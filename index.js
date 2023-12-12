@@ -1,6 +1,9 @@
 "use strict";
 
 // prettier-ignore
+const cancel = document.querySelector('#span')
+const bord = document.querySelector('.notice')
+cancel.addEventListener('click',()=>bord.remove())
 
 const form = document.querySelector(".form");
 const containerWorkouts = document.querySelector(".workouts");
@@ -35,7 +38,7 @@ class Workout {
   }
 
   _setDescription() {
-    console.log(this.date);
+
     this.description = `${this.name[0].toUpperCase()}${this.name.slice(1)} 0n ${
       days[this.date.getDay() - 1]
     }  ${this.date.getDate()} ${
@@ -106,7 +109,7 @@ class App {
     let html = `
      <li class="workout workout--${workout.name}" data-id='${workout.id}'>
    <div class='box'> <h2 class="workout__title">${workout.description}</h2>
-    <span class='cross'>&times;</span></div>
+    </div>
 
     <div class="workout__details">
       <span class="workout__icon">${
@@ -174,14 +177,14 @@ class App {
   _removeWorkout(e) {
     this.#workouts;
     const workoutEL = e.target.matches(".cross");
-    console.log(this.#workouts);
+    
     const workout = this.#workouts.find(
       work => work.id === workoutEL.dataset.id
     );
-   // console.log(workout)
+   // 
 
     this.#workouts.splice(this.#workouts.indexOf(workout),1)
-    console.log(this.#workouts)
+    
     workoutEL.remove()
   }
   _hideForm() {

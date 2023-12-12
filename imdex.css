@@ -14,8 +14,19 @@
     padding: 0;
     box-sizing: inherit;
   }
-
-  
+.sidebar-logo{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.sidebar-logo h2{
+  font-size: 30px;
+}
+  .sidebar-logo img{
+    width: 2rem;
+  }
   html {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -27,8 +38,6 @@
     font-weight: 400;
     line-height: 1.6;
     height: 100vh;
-    overscroll-behavior-y: none;
-  
     background-color: #fff;
    /* padding: 2.5rem;*/
   
@@ -60,11 +69,21 @@
     list-style: none;
     height: 77vh;
     overflow-y: scroll;
-    overflow-x: scroll;
+    overflow-x: none;
   }
-  
+ 
+.workouts::-webkit-scrollbar-track{
+    background: transparent;
+}
+.workouts::-webkit-scrollbar-thumb{
+    background: #606364;
+    border-radius: 30px;
+} 
   .workouts::-webkit-scrollbar {
-    width: 0;
+    cursor:pointer;
+    width: 1rem;
+    background: transparent;
+    border-radius: 30px;
   }
   
   .workout {
@@ -72,16 +91,20 @@
     border-radius: 5px;
     padding: 1.5rem 2.25rem;
     margin-bottom: 1.75rem;
+
     cursor: pointer;
-    box-shadow: inset -3px -3px 7px #ffffffb0, 
-    inset 3px 3px 5px rgba(94, 104, 121, 0.692);
-    display: grid;
+    
+    display: flex;
+    flex-wrap: wrap;
     gap: 0.75rem 1.5rem;
     transition: all .4s;
   }
   .workout:hover{
-    box-shadow: inset -4px -5px 7px #ffffffb0, 
-    inset 4px 5px 5px rgba(217, 220, 226, 0.692);
+   border-bottom: 1px solid #97a2aaa2;
+   border-right: 1px solid #97a2aaa2;
+   border-top: 1px solid #97a2aaa2;
+
+
   }
   .workout--running {
     border-left: 5px solid var(--color-brand--2);
@@ -180,6 +203,7 @@
   
   .copyright {
     margin-top: auto;
+    padding-top: 2rem;
     font-size: 1.3rem;
     text-align: center;
     color: var(--color-light--1);
@@ -200,6 +224,8 @@
  
   #map {
     flex: 1;
+    position: relative;
+    z-index: 1;
     height: 100%;
     background-color: var(--color-light--1);
   }
@@ -265,3 +291,21 @@
       margin-bottom: 1em;
     }
   }
+  .notice{
+    width: 200px;
+    font-size: 14px;
+    position: absolute;
+    top: 20px;
+    right: 10%;
+    color: white;
+    background-color: #333;
+    padding: 20px;
+    z-index: 100;
+  }
+ .notice span{
+  background-color: #eb2f2f88;
+  cursor: pointer;
+  padding: 2px 10px;
+  /* margin: 10px; */
+  border-radius: 30px;
+ }
